@@ -1,0 +1,15 @@
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout.jsx';
+import AnalyzePage from './pages/AnalyzePage.jsx';
+import HistoryPage from './pages/HistoryPage.jsx';
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<AnalyzePage />} />
+        <Route path="history" element={<HistoryPage />} />
+      </Route>
+    </Routes>
+  );
+}
